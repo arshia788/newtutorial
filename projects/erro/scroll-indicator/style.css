@@ -1,0 +1,80 @@
+@font-face {
+    font-family:"IRANSansX-Medium" ;
+    src: url(../fonts/IRANSansX-Medium.woff) format("woff");
+  }
+  
+  
+  
+  
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  
+  body{
+    direction: rtl;
+    font-family:"IRANSansX-Medium";
+  }
+  
+  header{
+    /* bala raft ta gir bokoneh  */
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    /* omad kole safhe ro gereft  */
+    width: 100%;
+    text-align: center;
+  }
+  
+  h2{
+    /* az bala va pein behesh fasle dadi */
+    padding: 20px 0;
+    font-size: 3rem;
+  }
+  
+  /* in jay on .progress-bar hast ke miad rosh gharar migireh */
+  header .progress{
+    width: 100%;
+    height: 10px;
+    background-color: #928b8b;
+  }
+  
+  /* in gharar hast breh poor beshe */
+  /* in farzand progress hast */
+  header .progress .progress-bar{
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right,rgb(184,2,216), rgb(255,0,43) );
+  }
+  
+  /* omad paein */
+  section{
+    margin-top: 150px;
+    /* az chap va rast fasle gereft  */
+    padding:  50px 100px;
+  }
+  
+  section p{
+    font-size: 1.5rem;
+    line-height: 30px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
