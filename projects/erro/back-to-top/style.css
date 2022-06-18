@@ -1,0 +1,98 @@
+@font-face {
+    font-family:"IRANSansX-Medium" ;
+    src: url(../fonts/IRANSansX-Medium.woff) format("woff");
+  }
+  
+  
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* scroll-behavior miad migeh harkati to safhe hast naram boro bala */
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    direction: rtl;
+    font-family:"IRANSansX-Medium";
+    height: 100vh;
+  }
+  
+  
+  section{
+    height: 100vh;
+    /* omad hame ro khati andakht paein */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 45px;
+  }
+  
+  
+  #sectionOne{
+    background: #b71c1c;
+  }
+  
+  #sectionTwo{
+    background: #E65100;
+  }
+  
+  #sectionThree{
+    background: #33691e;
+  }
+  
+  #sectionFour{
+    background: #0d47a1;
+  }
+  
+  
+  .to-top{
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    /* chon icon daroon to-top hast ba in kar miarish vasat  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #000;
+    /* mkhafi kardi ta hamishe nabashe  */
+    opacity: 0;
+    transition: all .4s ease-in-out;
+  }
+  
+  /* in miad class ro ezafhe mikoneh */
+  .to-top.active{
+    opacity: 1;
+    /* chon az ghabal dareh postion ro to faghat bottom ro midi */
+    bottom: 60px;
+  }
+  
+  .to-top svg{
+    font-size: 30px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
