@@ -1,11 +1,11 @@
 const toTop= document.querySelector('.to-top')
 
 
-// omadam ertefah on item ro az bala gereftam va goftam agar az in bishatr shod class ro bedeh
-// dg add nadam behesh
+
 
 window.addEventListener('scroll', function (){
        // agar safhe az 200px bishtar bashe miad class mideh be to-top
+       // baray in toggle nadadi chon hey miad o mireh valy to mikhy in bashe va agar nashod shart bereh
        if(window.pageYOffset > 200){
               toTop.classList.add('active')
        }
