@@ -1,0 +1,180 @@
+@font-face {
+    font-family:"IRANSansX-Medium";
+    src: url(../fonts/IRANSansX-Medium.woff) format("woff");
+}
+  
+*{
+    padding: 0;
+    margin: 0;
+}
+  
+body{
+    font-family:"IRANSansX-Medium";
+    height: 100vh;
+    width: 100%;
+    text-transform: capitalize;
+    background: url(../axe/tennis/1.jpg);
+    background-size: cover;
+}
+  
+header{
+    background-color: #111;
+    width: 100%;
+    height: 8vh; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+  
+  header h1{
+    margin-left: 20px;
+    color: crimson;
+  }
+  
+  header .ham{
+    margin-right: 30px;
+    display: none;
+  }
+  
+  header .ham i{
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+  header .navbar{
+    list-style: none;
+    display: flex;
+    color: #fff;
+  } 
+  
+  header .navbar li{
+    margin: 0 20px;
+  }
+  
+  
+  header .navbar li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0 15px;
+  }
+  
+  
+  header .navbar .shop i{
+    margin-left: 5px;
+    transition: all .3s ease-in-out;
+  }
+  
+  
+  header .navbar .nav{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    left: -100%;
+    display: flex;
+    list-style: none;
+    background-color: rgb(162, 162, 162);
+    transition: all .3s ease-in-out;
+  }
+  
+  
+  header .navbar .nav ul{
+    text-align: center;
+    flex: 1;
+  }
+  
+  header .navbar .nav h4{
+    font-size: 2.1rem;
+    color: navy;
+  }
+  
+  header .navbar .nav li{
+    list-style: none;
+    line-height: 3;
+  }
+  
+  
+  header .navbar .nav li a{
+    padding: 15px 0;
+    display: block;
+  }
+  
+  
+  header .navbar .nav img{
+    width: 200px;
+    border-radius: 3px;
+  }
+  
+  
+  @media screen and (min-width:1000px){
+    header .navbar .shop:hover .nav{
+      left: 0;
+    }
+    header .navbar .shop:hover i{
+      transform: rotate(180deg);
+    }
+  }
+  
+  
+  @media screen and (max-width:990px){
+    
+    header .navbar{
+      width: 100%;
+      position: absolute;
+      left: -100%;
+      transition: all .3s ease-in;
+      top: 70px;
+      display: block;
+      background-color: #444;
+    }
+  
+    
+    header .navbar.show{
+      left: 0;
+    }
+  
+    
+    header .navbar li{
+      margin: 20px 0;
+    }
+  
+    
+    header .navbar .nav{
+      position: relative;
+      left: -100%;
+      top: 0;
+      display: none;
+      transition: all .3s ease-in;
+      width: 100%;
+    }
+  
+    
+    header .navbar .nav.active{
+      display: block;
+      left: 0;
+      transition: all .3s ease-in;
+    }
+  
+    
+    header .navbar .shop i.rotate{
+      transform: rotate(180deg);
+    }
+  
+    header .navbar .shop{
+      position: relative;
+    }
+  
+    
+    header .ham{
+      display: block;
+      transition: all .3s ease-in;
+      cursor: pointer;
+    }
+  
+    
+    header .ham.color i{
+      color: crimson;
+    }
+  }
