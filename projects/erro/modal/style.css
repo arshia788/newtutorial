@@ -1,0 +1,92 @@
+@font-face {
+    font-family:"IRANSansX-Medium" ;
+    src: url(../fonts/IRANSansX-Medium.woff) format("woff");
+  }
+  
+  *{
+    padding: 0;
+    margin: 0;
+    outline: none;
+  }
+  
+  
+  body{
+    font-family:"IRANSansX-Medium";
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #open{
+    background: #2180db;
+    border: 3px solid #2180db;
+    color: #fff;
+    padding: 10px 50px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .3s ease-in;
+  }
+  
+  #open:hover{
+    background: #fff;
+    color: #000;
+  }
+  
+  
+  /* in miad kole safhe ro migireh  */
+  .modal_container{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    /* zamani ke in tag be nmayesh nabashe olaveyat ba tag hay dg hast  */
+    pointer-events: none;
+    transition: opacity .3s ease-in-out;
+  }
+  
+  
+  .modal_container.show{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .modal_container .modal{
+    /* on arz ziad ro azash gerefti  */
+    width: 650px;
+    background-color: #fff;
+    /* omadi ba padding item hay daroon ro tekon dadi */
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  
+  
+  
+  #close{
+    background: #2180db;
+    border: 3px solid #2180db;
+    color: #fff;
+    padding: 5px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    margin: 20px 0;
+    cursor: pointer;
+  }
+  
+  
+  
+  #close:hover{
+    background-color: #fff;
+    color: #000;
+  }
