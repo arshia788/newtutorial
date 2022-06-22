@@ -1,0 +1,101 @@
+@font-face {
+    font-family:"IRANSansX-Medium" ;
+    src: url(../fonts/IRANSansX-Medium.woff) format("woff");
+  }
+  
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  
+  body{
+    font-family:"IRANSansX-Medium";
+    direction: rtl;
+    height: 100vh;
+  }
+  
+  body{
+    background: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  h1{
+    /* margin-bottom miad hamy ziri ro miareh paein */
+    margin-bottom: 50px;
+  
+    /* khodehsh bala mimoneh ama bagieh miran paein baz */
+    /* padding-bottom: 50px; */
+  
+    border-bottom: 5px solid #cc0000;
+  }
+  
+  /* password div koli hast  */
+  .password{
+    /* chon 2 ta icon dari omadi on ha ro avodi to yek kat  */
+    display: flex;
+    justify-content: center;
+  
+    /* agar nabashe item ha vasat nmiran va hammon bala mimonnan */
+    align-items: center;
+    width: 500px;
+    height: 40px;
+    position: relative;
+    /* background-color: red; */
+  }
+  
+  .password input{
+    width: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    color: #555;
+    font-size: 18px;
+    font-weight: bold;
+    /* outline miad kari mikoneh ke har mogeh click kardi be input on roresh ro az baein mibareh */
+    outline: none;
+  }
+  
+  
+  
+  .toggle{
+    /* absolute dadi ta mabna on passWord bashe   */
+    position: absolute;
+    right: 40px;
+  }
+  
+  .fa-eye-slash{
+    visibility: hidden;
+    /* kar nmikoneh display  */
+    /* display: none; */
+  }
+  
+  .toggle i{
+    color: #505050;
+    opacity: .7;
+    cursor: pointer;
+    font-size: 19px;
+  }
+  
+  .toggle i:hover{
+    opacity: 1;
+  }
+  
+  /* gofti class hide bad rafti to chon harbar in class dareh miad o mireh */
+  .hide .fa-eye{
+    display: none;
+  }
+  
+  
+  /* hamiin kar ro baray in ham .fa-eye-slash kardi */
+  .hide .fa-eye-slash{
+  
+    /* kar nmikoneh  display*/
+    display: block;
+  
+    visibility: visible;
+  }
