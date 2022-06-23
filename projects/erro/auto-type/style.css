@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "IRANSansX-Medium";
+    src: url( '../fonts/IRANSansX-Medium.woff' ) format('woff');
+}
+
+*{
+    font-family:"IRANSansX-Medium" ;
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+}
+  
+  body{
+    display: flex;
+    direction: rtl;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)) , url(../axe/bg.jpg);
+  }
+  
+  .container{
+    width: 1400px;
+  }
+  
+  h1{
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+  }
+  
+  
+  /* in baray khodeh on matane hast */
+  h1 span{
+    color: #c91231;
+    font-weight: bold;
+  }
+  
+  
+  h1 span::after{
+    content: '';
+    background: #c91231;
+    /* omadi on khat kenar esme ro dorost kardi */
+    border-right: 4px solid #c91231;
+    margin-right: 5px;
+    /* ba in kart omadi in ro chemak zan kardi 
+    .5s in ro sari karder infinite ham hey tekrar beshe */
+    animation: blink .5s infinite ease;
+  }
+  
+  
+  @keyframes blink{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  
+  
+  
+  h2{
+    color: #fff;
+    font-size: 40px;
+  }
+  
+  

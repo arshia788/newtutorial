@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'IRANSansX-Regular';
+    src: url( '../fonts/IRANSansX-Regular.woff ') format('woff');
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'IRANSansX-Regular';
+    outline: none;
+}
+  
+  
+  
+body{
+  height: 100vh;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hidden{
+  visibility: hidden;
+}
+
+.alert-box{
+  position: absolute;
+  top: 50px;
+  right: 0;
+
+  /* agar width nmidadi in flex kar nmikard chon width nabod ke motavajeh fasle beshe */
+
+  width: 270px;
+  padding: 20px 30px;
+  background: green;
+  color: #fff;
+  font-size: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.alert-box .close-btn{
+  cursor: pointer;
+}
+
+.alert-box.hide{
+  animation: hideAlert 1s ease forwards;
+}
+
+/* alan vase raftan ham omadi hamin kar ro kardi */
+@keyframes hideAlert{
+  0%{
+    transform: translateX(-5%);
+  }
+  40%{
+    transform: translateX(0%);
+  }
+  80%{
+    transform: translateX(-15%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+
+
+.alert-box.show{
+  animation: showAlert 1s ease forwards;
+}
+
+
+@keyframes showAlert{
+  /* vaghti ro 0% hast yani ta miad in kar ro anjam mideh */
+  0%{
+    transform: translateX(100%);
+  }
+  /* be 40% miresh miad aghab */
+  40%{
+    transform: translateX(-15%);
+  }
+  /* mireh ro labeh mororgar */
+  80%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-5%);
+  }
+}
+
+/* in ha mogehi ke class show ezafeh shodeh anjam mishan */
+/* be show dadi in before ro chon show miad item ro miareh  */
+/* pas zaman bayad be in dadeh beshe na hide , hide faghat miad pak mikoneh */
+
+.alert-box.show::before{
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: teal;
+  bottom: 0;
+  left: 0;
+
+  /* linear miad sadeh sadeh mireh  */
+  /* 5s dadi chon on ja gofti to 5s biad pak beshe baray hamin hamahang mishe zaman */
+
+  animation: hideMaster 5s linear;
+}
+
+@keyframes hideMaster{
+  0%{
+    width: 100%;
+  }
+  100%{
+    width: 0;
+  }
+}
+
+.my-btn{
+  font-size: 20px;
+  color: #fff;
+  background-color: orangered;
+  border: none;
+  width: 200px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
