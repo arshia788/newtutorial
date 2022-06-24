@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'IRANSansX-Regular';
+  
+}
+
+body{
+  direction: rtl;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  background-color: #1a1a1a;
+  height: 100vh;
+  margin: auto;
+}
+
+
+/* in container ali ma hast */
+.container{
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(45deg,#e01a00,#ae31d9);
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .3);
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all .3s ease-in-out;
+  position: relative;
+}
+
+
+.container:hover{
+  height: 470px;
+  width: 350px;
+  border-radius: 5px;
+}
+
+.container .wrapper img{
+  width:200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  /* baray in block dadi chon tag img daroon tag a hast */
+  /* va tag a bayad block bedi ta kar bokoneh */
+  display: block;
+  /* chon auto dadi khodesh miad vasat */
+  margin: 20px auto;
+  object-fit: cover;
+  transition: all .3s ease-in-out;
+}
+
+.container:hover .wrapper img.active{
+  width: 350px;
+  height: 470px;
+  border-radius: 0;
+  /* margin ro 0 daid ta biad kole on safhe ro begireh  */
+  /* auto ro dadi ta on ro bendazhe vasat */
+  margin: 0 auto;
+  border: none;
+}
+
+.wrapper .title{
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+.wrapper .place{
+  color: #e0e0e0;
+  font-size: 17px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.content{
+  color: #e0e0e0;
+  font-size: 17px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.content .button{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.content .button .btn{
+  width: 150px;
+  height: 40px;
+  margin: 0 5px;
+}
+
+.content .button .btn button{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 5px;
+  transition: all .3s ease-in-out;
+}
+
+.content .button .btn button:hover{
+  /* scale miad on item ro kockik mikoneh  */
+  transform: scale(.95);
+}
+
+.icon{
+  position: absolute;
+  top: 0;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* on icon ha miran */
+/* chon yek esme hast class ha ta to miay ro img click mikoni in az in var miad icon ro
+display ro none mikoneh */
+
+.icon.active{
+  display: none;
+}
+
+.icon li{
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin: 5px 0;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+.container:hover .icon li{
+  opacity: 1;
+}
+
+
+.container:hover .icon li:nth-child(2){
+  /* in miad on hover ro .2s dir tar anjam mideh */
+  transition-delay: .2s;
+}
+
+.container:hover .icon li:nth-child(3){
+  transition-delay: .4s;
+}
+
+.icon li a{
+  text-decoration: none;
+  color: #7b00e0;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  /* flex ham khodeh flex ro anjam mideh ham block ro  */
+  /* baz block dadi ta tag a biad poor koneh on andazeh tag li ke dadi  */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
